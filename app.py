@@ -16,9 +16,6 @@ db = SQLAlchemy(app)
 mail = Mail(app)
 
 # ================== CREATE TABLES (IMPORTANT) ==================
-# This ensures tables are created automatically on Render
-with app.app_context():
-    db.create_all()
 
 # ================== MODELS ==================
 class Project(db.Model):
@@ -60,6 +57,9 @@ class UserProfile(db.Model):
     linkedin = db.Column(db.String(200))
     github = db.Column(db.String(200))
 
+with app.app_context():
+    db.create_all()
+    
 # ================== ROUTES ==================
 @app.route('/')
 def index():
