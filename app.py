@@ -181,7 +181,7 @@ def index():
     )
 
 @app.route("/projects")
-def projects_page():
+def projects():
     projects = Project.query.all()
     return render_template("projects.html", projects=projects)
 
