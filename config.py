@@ -4,15 +4,14 @@ class Config:
     # ================== SECURITY ==================
     SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key")
 
-    # ================== DATABASE (MYSQL) ==================
+    # ================== DATABASE (MYSQL + SSL) ==================
     SQLALCHEMY_DATABASE_URI = (
         f"mysql+pymysql://{os.environ['DB_USER']}:"
         f"{os.environ['DB_PASSWORD']}@"
         f"{os.environ['DB_HOST']}:"
         f"{os.environ['DB_PORT']}/"
-        f"{os.environ['DB_NAME']}?ssl=true"
+        f"{os.environ['DB_NAME']}?ssl_disabled=false"
     )
-
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
