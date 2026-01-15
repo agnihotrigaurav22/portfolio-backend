@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Me{% endblock %}
+
+{% block content %}
+<section class="py-5 min-vh-100 d-flex align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="glass-card p-5">
+                    <h2 class="text-center mb-4">Get In <span class="text-accent">Touch</span></h2>
+                    <p class="text-center text-light-50 mb-5">Have a project in mind or just want to say Hey? I'd love to
+                        hear from you.</p>
+
+                    <form method="POST">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating text-dark">
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        placeholder="Your Name" required>
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating text-dark">
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="name@example.com" required>
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating text-dark">
+                                    <input type="text" class="form-control" id="subject" name="subject"
+                                        placeholder="Subject" required>
+                                    <label for="subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating text-dark">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="message"
+                                        name="message" style="height: 150px" required></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5 w-50">Send
+                                    Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
